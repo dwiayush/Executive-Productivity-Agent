@@ -1,0 +1,7 @@
+streamlit
+openai
+python-dateutil
+pytz
+fuzzywuzzy[speedup]
+SQLAlchemy
+pytest

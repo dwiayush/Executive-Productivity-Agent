@@ -1,0 +1,59 @@
+{
+  "people": [
+    {"name": "Arjun Malhotra", "role": "VP Sales"},
+    {"name": "Raghav Sethi"},
+    {"name": "Divya"},
+    {"name": "Facilities"}
+  ],
+  "sources": [
+    {
+      "id": "leadership_sync_2026-09-21",
+      "type": "meeting",
+      "date": "2026-09-21",
+      "title": "Leadership Sync",
+      "content": "Arjun: I'll send Raghav the updated vendor list. Also, we will review the Q3 campaign deck on Wednesday initially. Meridian call to be rescheduled. Mumbai office lease renewal needs attention."
+    },
+    {
+      "id": "vendor_email_thread_2026-09-21",
+      "type": "email",
+      "date": "2026-09-21",
+      "title": "Vendor List - Email Thread",
+      "content": "Raghav: Can you send the updated vendor list today?\nArjun: I'll get that to you by EOD."
+    },
+    {
+      "id": "voice_note_1_2026-09-21",
+      "type": "voice_note",
+      "date": "2026-09-21",
+      "title": "Voice Note 1",
+      "content": "Need to get Raghav that vendor list and follow up on Meridian Logistics scheduling."
+    },
+    {
+      "id": "q3_updates_2026-09-22",
+      "type": "email",
+      "date": "2026-09-22",
+      "title": "Q3 Campaign Deck Scheduling",
+      "content": "Team: Change review from Wednesday to Thursday morning at 9:30 AM. Please adjust calendars."
+    },
+    {
+      "id": "meridian_call_reschedule_2026-09-22",
+      "type": "email",
+      "date": "2026-09-22",
+      "title": "Meridian Logistics Call",
+      "content": "Meridian Logistics: Rescheduled — Final confirmed time: Wednesday 2026-09-23 15:00."
+    },
+    {
+      "id": "expense_variance_2026-09-23",
+      "type": "email",
+      "date": "2026-09-23",
+      "title": "Expense Variance Report",
+      "content": "Arjun requested Expense Variance Report by Wednesday evening.\nDivya: Sent the Expense Variance Report Wednesday evening."
+    },
+    {
+      "id": "mumbai_lease_notes_2026-09-21",
+      "type": "meeting_note",
+      "date": "2026-09-21",
+      "title": "Mumbai Lease Discussion",
+      "content": "Discussion: Mumbai office lease renewal needs decision — ownership not established in notes."
+    }
+  ]
+}

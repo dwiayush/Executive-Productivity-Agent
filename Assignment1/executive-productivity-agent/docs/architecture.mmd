@@ -1,0 +1,82 @@
+flowchart TB
+    subgraph DATA_PACK [DATA PACK]
+      direction TB
+      Emails[Emails]
+      Calendar[Calendar]
+      Transcript[Meeting Transcript]
+      Voice[Voice Notes]
+    end
+
+    subgraph ING [INGESTION]
+      direction TB
+      Ingest[Load & parse sources]
+    end
+
+    subgraph AI [SEMANTIC EXTRACTION (OpenAI)]
+      direction TB
+      Extract[LLM Structured Extraction]
+    end
+
+    subgraph VAL [VALIDATION]
+      direction TB
+      Validate[Validate & sanitize LLM JSON]
+    end
+
+    subgraph NORM [NORMALIZATION]
+      direction TB
+      Norm[Date & entity normalization]
+    end
+
+    subgraph DEDUP [DEDUPLICATION]
+      direction TB
+      Merge[Merge similar commitments (latest-source)]
+    end
+
+    subgraph STORE [TASK STORE]
+      direction TB
+      DB[(In-memory / SQLite)]
+    end
+
+    subgraph STATUS [STATUS ENGINE]
+      direction TB
+      Status[Deadline, Overdue, Upcoming]
+    end
+
+    subgraph EVID [EVIDENCE]
+      direction TB
+      Evidence[Evidence Store (sources & dates)]
+    end
+
+    subgraph BRIEF [DAILY BRIEF]
+      direction TB
+      Brief[Prioritize Overdue, Today, Unclear, Upcoming]
+    end
+
+    subgraph QA [Q&A AGENT]
+      direction TB
+      QAagent[Evidence-grounded Q&A]
+    end
+
+    subgraph UI [STREAMLIT UI]
+      direction TB
+      App[Executive Dashboard]
+    end
+
+    Emails --> Ingest
+    Calendar --> Ingest
+    Transcript --> Ingest
+    Voice --> Ingest
+
+    Ingest --> Extract
+    Extract --> Validate
+    Validate --> Norm
+    Norm --> Merge
+    Merge --> DB
+    DB --> Status
+    DB --> Evidence
+    Status --> Brief
+    Evidence --> Brief
+    Brief --> App
+    QAagent --> App
+    Evidence --> QAagent
+    DB --> QAagent

@@ -1,0 +1,1 @@
+Answer the user's question using grounded evidence from tasks/sources. If ownership is unclear, say so and show evidence.
